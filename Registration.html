@@ -153,7 +153,10 @@
             submitButton.addEventListener('click', function() {
                 this.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)'; // Add shadow on click
             });
-        
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('registrationForm').addEventListener('submit', function(event) {
                 const username = document.querySelector('input[name="uname"]').value;
                 const password = document.querySelector('input[name="pass"]').value;
@@ -195,7 +198,7 @@
 <body>
     <nav>
         <ul>
-            <li><a href="./home.html">🏠</a></li>
+            <li><a href="./Home.html">🏠</a></li>
             <li><a href="./About.html">ⓘ</a></li>
             <li><a href="./ContactUs.html">📞</a></li>
             <li><a href="./Registration.html">Register</a></li>
@@ -296,7 +299,7 @@
             <div class="form-group row">
                 <label for="address" class="col-sm-3 col-form-label">Address:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" name="address" id="uname" placeholder="Enter Addresss..." cols="30" rows="3">
+                    <textarea class="form-control" name="address" id="address" cols="30" rows="3">Enter your message here!</textarea>
                 </div>
             </div>
             <div class="text-center">
@@ -313,3 +316,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
