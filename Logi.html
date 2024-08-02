@@ -1,0 +1,591 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Mystyle2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 1000px;
+            min-width: 1000px;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 7px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .form-center {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-row {
+            align-items: center;
+        }
+        .form-check-inline {
+            margin-right: 15px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        hr {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">🏠︎</a></li>
+            <li><a href="./About.html">ⓘ</a></li>
+            <li><a href="./ContactUs.html">📞</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+            <li><a href="./Exp11-LoginPage.html">Login</a></li>
+            <li><a href="./Logi.html">🛒</a></li>
+        </ul>
+    </nav>
+    
+    <h2>Place Your Order</h2>
+    
+    <div class="form-center">
+        <form id="orderForm" action="Ordered.html" method="post">
+            <div class="form-group form-row">
+                <label for="email" class="col-form-label col-sm-4">Email ID:</label>
+                <div class="col-sm-8">
+                    <input list="email" name="office" id="email" class="form-control" required>
+                    <datalist id="email">
+                        <option value="218A1A4462@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4463@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4464@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4465@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4454@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4453@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4442@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4458@risekrishnasaiprakasam.edu.in"></option>
+                    </datalist>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+            </div>
+
+            <div class="form-group form-row">
+                <label for="mobile" class="col-form-label col-sm-4">Enter Your Mobile Number:</label>
+                <div class="col-sm-8">
+                    <input type="tel" name="personal" id="mobile" class="form-control" pattern="[0-9]{10}" title="Enter a ten-digit number" required>
+                    <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label class="col-form-label col-sm-4">Color:</label>
+                <div class="col-sm-8">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Color" value="B" id="color-black" required>
+                        <label class="form-check-label" for="color-black">Black</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Color" value="W" id="color-white" required>
+                        <label class="form-check-label" for="color-white">White</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Color" value="R" id="color-red" required>
+                        <label class="form-check-label" for="color-red">Red</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Color" value="Blue" id="color-blue" required>
+                        <label class="form-check-label" for="color-blue">Blue</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Color" value="G" id="color-green" required>
+                        <label class="form-check-label" for="color-green">Green</label>
+                    </div>
+                    <div class="invalid-feedback">Please select a color.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label for="brand" class="col-form-label col-sm-4">Brand:</label>
+                <div class="col-sm-8">
+                    <select name="Brand" id="brand" class="form-control" required>
+                        <option value="">Select a brand</option>
+                        <option value="A">Apple</option>
+                        <option value="S">Samsung</option>
+                        <option value="O">OnePlus</option>
+                        <option value="MI">Xiaomi</option>
+                        <option value="OP">Oppo</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a brand.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label for="delivery-date" class="col-form-label col-sm-4">Delivery Date:</label>
+                <div class="col-sm-8">
+                    <input type="date" name="delivery-date" id="delivery-date" class="form-control" required>
+                    <div class="invalid-feedback">Please select a delivery date.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label class="col-form-label col-sm-4">Choose Your Product:</label>
+                <div class="col-sm-8">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="products[]" value="Mobile" id="product-mobile">
+                        <label class="form-check-label" for="product-mobile">Mobile</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="products[]" value="Smart Watch" id="product-smartwatch">
+                        <label class="form-check-label" for="product-smartwatch">Smart Watch</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="products[]" value="Earpods" id="product-earpods">
+                        <label class="form-check-label" for="product-earpods">Earpods</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="products[]" value="Laptop" id="product-laptop">
+                        <label class="form-check-label" for="product-laptop">Laptop</label>
+                    </div>
+                    <div class="invalid-feedback">Please select at least one product.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label for="model" class="col-form-label col-sm-4">Model:</label>
+                <div class="col-sm-8">
+                    <textarea name="model" id="model" class="form-control" placeholder="Enter the complete details of your order..." required></textarea>
+                    <div class="invalid-feedback">Please provide details about the model.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label for="quantity" class="col-form-label col-sm-4">Purchase:</label>
+                <div class="col-sm-8">
+                    <input type="number" name="items" id="quantity" class="form-control" min="0" max="100" step="1" value="0" required>
+                    <div class="invalid-feedback">Please specify a quantity.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label for="address" class="col-form-label col-sm-4">Address:</label>
+                <div class="col-sm-8">
+                    <textarea name="address" id="address" class="form-control" placeholder="Enter delivery address..." required></textarea>
+                    <div class="invalid-feedback">Please enter a delivery address.</div>
+                </div>
+            </div>
+            
+            <input type="submit" class="btn btn-dark btn-block" value="Submit">
+        </form>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Sparks Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('orderForm');
+            const inputs = form.querySelectorAll('input, select, textarea');
+
+            form.addEventListener('submit', function (event) {
+                let valid = true;
+
+                // Loop through all inputs to validate them
+                inputs.forEach(input => {
+                    if (input.type === 'radio' || input.type === 'checkbox') {
+                        const name = input.name;
+                        const checked = form.querySelector(`input[name="${name}"]:checked`);
+                        if (input.required && !checked) {
+                            form.querySelector(`input[name="${name}"]`).classList.add('is-invalid');
+                            valid = false;
+                        } else {
+                            form.querySelector(`input[name="${name}"]`).classList.remove('is-invalid');
+                        }
+                    } else {
+                        if (input.required && !input.value.trim()) {
+                            input.classList.add('is-invalid');
+                            valid = false;
+                        } else {
+                            input.classList.remove('is-invalid');
+                        }
+                    }
+                });
+
+                if (!valid) {
+                    event.preventDefault();
+                    form.querySelector('.is-invalid')?.focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Mystyle2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 1000px;
+            min-width: 1000px;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 7px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: white;
+            color: blueviolet;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .form-center {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            transition: box-shadow 0.3s ease;
+        }
+        form:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-row {
+            align-items: center;
+        }
+        .form-check-inline {
+            margin-right: 15px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        hr {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">🏠</a></li>
+            <li><a href="./About.html">ⓘ</a></li>
+            <li><a href="./ContactUs.html">📞</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+            <li><a href="./Exp11-LoginPage.html">Login</a></li>
+            <li><a href="./Logi.html">🛒</a></li>
+        </ul>
+    </nav>
+    
+    <h2>Place Your Order</h2>
+    
+    <div class="form-center">
+        <form id="orderForm" action="Ordered.html" method="post">
+            <div class="form-group form-row">
+                <label for="email" class="col-form-label col-sm-4">Email ID:</label>
+                <div class="col-sm-8">
+                    <input list="email" name="office" id="email" class="form-control" required>
+                    <datalist id="email">
+                        <option value="218A1A4462@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4463@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4464@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4465@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4454@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4453@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4442@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4458@risekrishnasaiprakasam.edu.in"></option>
+                    </datalist>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+            </div>
+
+            <div class="form-group form-row">
+                <label for="mobile" class="col-form-label col-sm-4">Enter Your Mobile Number:</label>
+                <div class="col-sm-8">
+                    <input type="tel" name="personal" id="mobile" class="form-control" pattern="[0-9]{10}" title="Enter a ten-digit number" required>
+                    <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label class="col-form-label col-sm-4">Color:</label>
+                <div class="col-sm-8">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Color" value="B" id="color-black" required>
+                        <label class="form-check-label" for="color-black">Black</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Color" value="W" id="color-white" required>
+                        <label class="form-check-label" for="color-white">White</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Color" value="R" id="color-red" required>
+                        <label class="form-check-label" for="color-red">Red</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Color" value="Blue" id="color-blue" required>
+                        <label class="form-check-label" for="color-blue">Blue</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Color" value="G" id="color-green" required>
+                        <label class="form-check-label" for="color-green">Green</label>
+                    </div>
+                    <div class="invalid-feedback">Please select a color.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label for="brand" class="col-form-label col-sm-4">Brand:</label>
+                <div class="col-sm-8">
+                    <select name="Brand" id="brand" class="form-control" required>
+                        <option value="">Select a brand</option>
+                        <option value="A">Apple</option>
+                        <option value="S">Samsung</option>
+                        <option value="O">OnePlus</option>
+                        <option value="MI">Xiaomi</option>
+                        <option value="OP">Oppo</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a brand.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label for="delivery-date" class="col-form-label col-sm-4">Delivery Date:</label>
+                <div class="col-sm-8">
+                    <input type="date" name="delivery-date" id="delivery-date" class="form-control" required>
+                    <div class="invalid-feedback">Please select a delivery date.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label class="col-form-label col-sm-4">Choose Your Product:</label>
+                <div class="col-sm-8">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="products[]" value="Mobile" id="product-mobile">
+                        <label class="form-check-label" for="product-mobile">Mobile</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="products[]" value="Smart Watch" id="product-smartwatch">
+                        <label class="form-check-label" for="product-smartwatch">Smart Watch</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="products[]" value="Earpods" id="product-earpods">
+                        <label class="form-check-label" for="product-earpods">Earpods</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="products[]" value="Laptop" id="product-laptop">
+                        <label class="form-check-label" for="product-laptop">Laptop</label>
+                    </div>
+                    <div class="invalid-feedback">Please select at least one product.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label for="model" class="col-form-label col-sm-4">Model:</label>
+                <div class="col-sm-8">
+                    <textarea name="model" id="model" class="form-control" placeholder="Enter the complete details of your order..." required></textarea>
+                    <div class="invalid-feedback">Please provide details about the model.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label for="quantity" class="col-form-label col-sm-4">Purchase:</label>
+                <div class="col-sm-8">
+                    <input type="number" name="items" id="quantity" class="form-control" min="0" max="100" step="1" value="0" required>
+                    <div class="invalid-feedback">Please specify a quantity.</div>
+                </div>
+            </div>
+            
+            <div class="form-group form-row">
+                <label for="address" class="col-form-label col-sm-4">Address:</label>
+                <div class="col-sm-8">
+                    <textarea name="address" id="address" class="form-control" placeholder="Enter delivery address..." required></textarea>
+                    <div class="invalid-feedback">Please enter a delivery address.</div>
+                </div>
+            </div>
+            
+            <input type="submit" class="btn btn-dark btn-block" value="Submit">
+        </form>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Sparks Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('orderForm');
+            const inputs = form.querySelectorAll('input, select, textarea');
+            const navLinks = document.querySelectorAll('nav a');
+
+            form.addEventListener('submit', function (event) {
+                let valid = true;
+
+                // Loop through all inputs to validate them
+                inputs.forEach(input => {
+                    if (input.type === 'radio' || input.type === 'checkbox') {
+                        const name = input.name;
+                        const checked = form.querySelector(`input[name="${name}"]:checked`);
+                        if (input.required && !checked) {
+                            form.querySelector(`input[name="${name}"]`).classList.add('is-invalid');
+                            valid = false;
+                        } else {
+                            form.querySelector(`input[name="${name}"]`).classList.remove('is-invalid');
+                        }
+                    } else {
+                        if (input.required && !input.value.trim()) {
+                            input.classList.add('is-invalid');
+                            valid = false;
+                        } else {
+                            input.classList.remove('is-invalid');
+                        }
+                    }
+                });
+
+                if (!valid) {
+                    event.preventDefault();
+                    form.querySelector('.is-invalid')?.focus();
+                }
+            });
+
+            // Mouse event listeners for form elements
+            inputs.forEach(input => {
+                input.addEventListener('mouseenter', function () {
+                    this.classList.add('bg-light');
+                });
+                input.addEventListener('mouseleave', function () {
+                    this.classList.remove('bg-light');
+                });
+            });
+
+            // Mouse event listeners for the submit button
+            const submitButton = form.querySelector('input[type="submit"]');
+            submitButton.addEventListener('mouseenter', function () {
+                this.classList.add('btn-primary');
+            });
+            submitButton.addEventListener('mouseleave', function () {
+                this.classList.remove('btn-primary');
+            });
+           
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    link.style.textDecoration = 'underline';
+                    
+                });
+                link.addEventListener('mouseout', () => {
+                    link.style.textDecoration = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

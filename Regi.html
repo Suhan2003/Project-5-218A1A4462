@@ -1,0 +1,206 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Created</title>
+    <link rel="stylesheet" href="Mystyle2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 7px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            color: #333;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            bottom: 0;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">🏠︎</a></li>
+            <li><a href="./About.html">ⓘ</a></li>
+            <li><a href="./ContactUs.html">📞</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+            <li><a href="./Exp11-LoginPage.html">Login</a></li>
+            <li><a href="./Logi.html">🛒</a></li>
+        </ul>
+    </nav>
+    
+    <h1><b>Account Created Successfully!<br>You can now log in to your account.</b></h1>
+    
+    <img src="account created.gif" alt="Account Created Animation" width="600" height="400">
+    <br><br><br><br><br><br>
+    <hr>
+    
+    <footer>
+        <p>&copy; 2024 Sparks Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Created</title>
+    <link rel="stylesheet" href="Mystyle2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 7px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: white;
+            color: blueviolet;
+        }
+        h1 {
+            color: #333;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            bottom: 0;
+            padding: 10px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">🏠</a></li>
+            <li><a href="./About.html">ⓘ</a></li>
+            <li><a href="./ContactUs.html">📞</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+            <li><a href="./Exp11-LoginPage.html">Login</a></li>
+            <li><a href="./Logi.html">🛒</a></li>
+        </ul>
+    </nav>
+    
+    <h1><b>Account Created Successfully!<br>You can now log in to your account.</b></h1>
+    
+    <img src="account created.gif" alt="Account Created Animation" width="600" height="400">
+    <br><br><br><br><br><br>
+    <hr>
+    
+    <footer>
+        <p>&copy; 2024 Sparks Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select all navigation links and image
+            const navLinks = document.querySelectorAll('nav a');
+            const image = document.querySelector('img');
+
+            // Add mouse event listeners to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    link.style.textDecoration = 'underline';
+                });
+                link.addEventListener('mouseout', () => {
+                    link.style.textDecoration = 'none';
+                });
+            });
+
+            // Add mouse event listeners to the image
+            image.addEventListener('mouseenter', function () {
+                this.style.transform = 'scale(1.05)';
+                this.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.2)';
+            });
+            image.addEventListener('mouseleave', function () {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
+

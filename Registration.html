@@ -1,0 +1,554 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="Mystyle2.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            min-height: 1000px;
+            min-width: 1000px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .form-inline label {
+            margin-bottom: 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            max-width: 100%;
+        }
+
+        .form-check-inline {
+            margin-right: 10px;
+        }
+
+        /* Media Queries */
+        @media screen and (min-width: 320px) {
+            body {
+                background-color: aqua;
+            }
+        }
+
+        @media screen and (min-width: 620px) {
+            body {
+                background-color: violet;
+            }
+        }
+
+        @media screen and (min-width: 821px) and (max-width: 1000px) {
+            body {
+                background-color: blueviolet;
+            }
+        }
+
+        @media screen and (min-width: 1201px) {
+            body {
+                background-color: pink;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('registrationForm').addEventListener('submit', function(event) {
+                const username = document.querySelector('input[name="uname"]').value;
+                const password = document.querySelector('input[name="pass"]').value;
+                const email = document.querySelector('input[name="office"]').value;
+                const mobile = document.querySelector('input[name="personal"]').value;
+                const gender = document.querySelector('input[name="gender"]:checked');
+                const branch = document.querySelector('select[name="Branch"]').value;
+                const address = document.querySelector('textarea[name="address"]').value;
+
+                // Simple validation
+                if (!username || !password || !email || !mobile || !gender || !branch || !address) {
+                    alert('Please fill out all required fields.');
+                    event.preventDefault(); // Prevent form from submitting
+                    return;
+                }
+
+                // Validate email format
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    alert('Please enter a valid email address.');
+                    event.preventDefault(); // Prevent form from submitting
+                    return;
+                }
+
+                // Validate mobile number format
+                const mobilePattern = /^[0-9]{10}$/;
+                if (!mobilePattern.test(mobile)) {
+                    alert('Please enter a valid 10-digit mobile number.');
+                    event.preventDefault(); // Prevent form from submitting
+                    return;
+                }
+
+                // All validations passed, form will be submitted
+                alert('Form submitted successfully!');
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">🏠︎</a></li>
+            <li><a href="./About.html">ⓘ</a></li>
+            <li><a href="./ContactUs.html">📞</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+            <li><a href="./Exp11-LoginPage.html">Login</a></li>
+            <li><a href="./Logi.html">🛒</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Create Account in Spark</h2>
+        <form id="registrationForm" action="Regi.html" method="post">
+            <div class="form-group row">
+                <label for="uname" class="col-sm-3 col-form-label">UserName:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="uname" id="uname" placeholder="UserName" autofocus>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="pass" class="col-sm-3 col-form-label">Password:</label>
+                <div class="col-sm-9">
+                    <input type="password" class="form-control" name="pass" id="pass" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="bname" class="col-sm-3 col-form-label">Date of Birth:</label>
+                <div class="col-sm-9">
+                    <input type="date" class="form-control" name="bname" id="bname">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="office" class="col-sm-3 col-form-label">Email ID:</label>
+                <div class="col-sm-9">
+                    <input type="email" class="form-control" list="email" name="office" id="office">
+                    <datalist id="email">
+                        <option value="218A1A4462@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4463@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4464@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4465@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4454@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4453@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4442@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4458@risekrishnasaiprakasam.edu.in"></option>
+                    </datalist>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="personal" class="col-sm-3 col-form-label">Mobile Number:</label>
+                <div class="col-sm-9">
+                    <input type="tel" class="form-control" name="personal" id="personal" pattern="[0-9]{10}" title="The Ten digits number">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Gender:</label>
+                <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" value="M" id="male">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" value="F" id="female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Branch" class="col-sm-3 col-form-label">Qualification:</label>
+                <div class="col-sm-9">
+                    <select class="form-control" name="Branch" id="Branch">
+                        <option value="SSC">SSC</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Diploma">Diploma</option>
+                        <option value="Degree">Degree</option>
+                        <option value="BTech">BTech</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Languages Known:</label>
+                <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="lang[]" value="Telugu" id="telugu">
+                        <label class="form-check-label" for="telugu">Telugu</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="lang[]" value="Hindi" id="hindi">
+                        <label class="form-check-label" for="hindi">Hindi</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="lang[]" value="English" id="english">
+                        <label class="form-check-label" for="english">English</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="lang[]" value="Tamil" id="tamil">
+                        <label class="form-check-label" for="tamil">Tamil</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="address" class="col-sm-3 col-form-label">Address:</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" name="address" id="address" cols="30" rows="3">Enter your message here!</textarea>
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" class="btn btn-success" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; Sparks Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="Mystyle2.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            min-height: 1000px;
+            min-width: 1000px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+          
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            background-color: white;
+            color: blueviolet;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .form-inline label {
+            margin-bottom: 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            max-width: 100%;
+        }
+
+        .form-check-inline {
+            margin-right: 10px;
+        }
+
+        .btn {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #28a745;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Media Queries */
+        @media screen and (min-width: 320px) {
+            body {
+                background-color: aqua;
+            }
+        }
+
+        @media screen and (min-width: 620px) {
+            body {
+                background-color: violet;
+            }
+        }
+
+        @media screen and (min-width: 821px) and (max-width: 1000px) {
+            body {
+                background-color: blueviolet;
+            }
+        }
+
+        @media screen and (min-width: 1201px) {
+            body {
+                background-color: pink;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all navigation links and form elements
+            const navLinks = document.querySelectorAll('nav a');
+            const formControls = document.querySelectorAll('.form-control');
+            const submitButton = document.querySelector('input[type="submit"]');
+           
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    link.style.textDecoration = 'underline';
+                });
+                link.addEventListener('mouseout', () => {
+                    link.style.textDecoration = 'none';
+                });
+            });
+            // Add mouse event listeners to form controls
+            formControls.forEach(control => {
+                control.addEventListener('focus', function() {
+                    this.style.borderColor = '#007bff'; // Change border color on focus
+                });
+                control.addEventListener('blur', function() {
+                    this.style.borderColor = ''; // Revert to original border color
+                });
+            });
+
+            // Add mouse event listener to submit button
+            submitButton.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#218838'; // Darker green on hover
+            });
+            submitButton.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#28a745'; // Original green color
+            });
+            submitButton.addEventListener('click', function() {
+                this.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)'; // Add shadow on click
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">🏠</a></li>
+            <li><a href="./About.html">ⓘ</a></li>
+            <li><a href="./ContactUs.html">📞</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+            <li><a href="./Exp11-LoginPage.html">Login</a></li>
+            <li><a href="./Logi.html">🛒</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Create Account in Spark</h2>
+        <form id="registrationForm" action="Regi.html" method="post">
+            <div class="form-group row">
+                <label for="uname" class="col-sm-3 col-form-label">UserName:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="uname" id="uname" placeholder="UserName" autofocus>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="pass" class="col-sm-3 col-form-label">Password:</label>
+                <div class="col-sm-9">
+                    <input type="password" class="form-control" name="pass" id="pass" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="bname" class="col-sm-3 col-form-label">Date of Birth:</label>
+                <div class="col-sm-9">
+                    <input type="date" class="form-control" name="bname" id="bname">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="office" class="col-sm-3 col-form-label">Email ID:</label>
+                <div class="col-sm-9">
+                    <input type="email" class="form-control" list="email" name="office" id="office">
+                    <datalist id="email">
+                        <option value="218A1A4462@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4463@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4464@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4465@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4454@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4453@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4442@risekrishnasaiprakasam.edu.in"></option>
+                        <option value="218A1A4458@risekrishnasaiprakasam.edu.in"></option>
+                    </datalist>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="personal" class="col-sm-3 col-form-label">Mobile Number:</label>
+                <div class="col-sm-9">
+                    <input type="tel" class="form-control" name="personal" id="personal" pattern="[0-9]{10}" title="The Ten digits number">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Gender:</label>
+                <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" value="M" id="male">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" value="F" id="female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Branch" class="col-sm-3 col-form-label">Qualification:</label>
+                <div class="col-sm-9">
+                    <select class="form-control" name="Branch" id="Branch">
+                        <option value="SSC">SSC</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Diploma">Diploma</option>
+                        <option value="Degree">Degree</option>
+                        <option value="BTech">BTech</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Languages Known:</label>
+                <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="lang[]" value="Telugu" id="telugu">
+                        <label class="form-check-label" for="telugu">Telugu</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="lang[]" value="Hindi" id="hindi">
+                        <label class="form-check-label" for="hindi">Hindi</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="lang[]" value="English" id="english">
+                        <label class="form-check-label" for="english">English</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="lang[]" value="Tamil" id="tamil">
+                        <label class="form-check-label" for="tamil">Tamil</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="address" class="col-sm-3 col-form-label">Address:</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" name="address" id="address" cols="30" rows="3">Enter your message here!</textarea>
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" class="btn btn-success" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; Sparks Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

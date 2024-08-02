@@ -1,0 +1,534 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="Mystyle2.css">
+    <style>
+        body {
+           
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: black;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 7px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .contain {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4% 0;
+            gap: 20px;
+        }
+        .img img {
+            width: 350px;
+            height: 300px;
+            border-radius: 8px;
+            border: 2px solid #fff;
+        }
+        .text {
+            font-size: 16px;
+            padding: 2%;
+            background: rgba(0, 0, 0, 0.5); /* Add a background for better readability */
+            border-radius: 8px;
+            padding: 20px;
+        }
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">🏠︎</a></li>
+            <li><a href="./About.html">ⓘ</a></li>
+            <li><a href="./ContactUs.html">📞</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+            <li><a href="./Exp11-LoginPage.html">Login</a></li>
+            <li><a href="./Logi.html">🛒</a></li>
+        </ul>
+    </nav>
+
+    <h2>In case of any queries, contact us!</h2>
+
+    <div class="contain">
+        <div class="img">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.34033167835!2d80.04476467458953!3d15.51987575391137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b01ae1001ec8f%3A0x426588bd765da08c!2sRavi%20Priya%20Mall%20%26%20Multiplex!5e0!3m2!1sen!2sin!4v1722524295705!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="text">
+            <form action="#" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="mobile">Mobile No:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" title="Enter a ten digit number" required><br><br>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" cols="40" rows="4" required></textarea><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <h2>Contact Details:</h2>
+    <p>Mobile Number: +91 9867542310<br>Mail: abc@gmail.com</p>
+
+    <footer>
+        <p>&copy; 2024 Sparks Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>-->
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="Mystyle2.css">
+    <style>
+        body {
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: black;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 7px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .contain {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4% 0;
+            gap: 20px;
+        }
+        .img img {
+            width: 350px;
+            height: 300px;
+            border-radius: 8px;
+            border: 2px solid #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .text {
+            font-size: 16px;
+            padding: 2%;
+            background: rgba(0, 0, 0, 0.5); /* Add a background for better readability */
+            border-radius: 8px;
+            padding: 20px;
+        }
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            background-color: #f0f0f0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            bottom: 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">🏠︎</a></li>
+            <li><a href="./About.html">ⓘ</a></li>
+            <li><a href="./ContactUs.html">📞</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+            <li><a href="./Exp11-LoginPage.html">Login</a></li>
+            <li><a href="./Logi.html">🛒</a></li>
+        </ul>
+    </nav>
+
+    <h2>In case of any queries, contact us!</h2>
+
+    <div class="contain">
+        <div class="img">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.34033167835!2d80.04476467458953!3d15.51987575391137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b01ae1001ec8f%3A0x426588bd765da08c!2sRavi%20Priya%20Mall%20%26%20Multiplex!5e0!3m2!1sen!2sin!4v1722524295705!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="text">
+            <form action="#" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="mobile">Mobile No:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" title="Enter a ten digit number" required><br><br>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" cols="40" rows="4" required></textarea><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <h2>Contact Details:</h2>
+    <p>Mobile Number: +91 9867542310<br>Mail: abc@gmail.com</p>
+
+    <footer>
+        <p>&copy; 2024 Sparks Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hover effect for images
+            const images = document.querySelectorAll('.img img');
+            images.forEach(image => {
+                image.addEventListener('mouseover', () => {
+                    image.style.transform = 'scale(1.05)';
+                    image.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)';
+                });
+                image.addEventListener('mouseout', () => {
+                    image.style.transform = 'scale(1)';
+                    image.style.boxShadow = '';
+                });
+            });
+
+            // Hover effect for form elements
+            const formElements = document.querySelectorAll('input[type="email"], input[type="tel"], textarea');
+            formElements.forEach(element => {
+                element.addEventListener('focus', () => {
+                    element.style.backgroundColor = '#f0f0f0';
+                    element.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.2)';
+                });
+                element.addEventListener('blur', () => {
+                    element.style.backgroundColor = '';
+                    element.style.boxShadow = '';
+                });
+            });
+
+            // Hover effect for submit button
+            const submitButton = document.querySelector('input[type="submit"]');
+            submitButton.addEventListener('mouseover', () => {
+                submitButton.style.backgroundColor = '#555';
+                submitButton.style.transform = 'scale(1.05)';
+            });
+            submitButton.addEventListener('mouseout', () => {
+                submitButton.style.backgroundColor = '#333';
+                submitButton.style.transform = 'scale(1)';
+            });
+
+            // Hover effect for navigation links
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    link.style.textDecoration = 'underline';
+                });
+                link.addEventListener('mouseout', () => {
+                    link.style.textDecoration = 'none';
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="Mystyle2.css">
+    <style>
+        body {
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: black;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 7px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: white;
+            color: blueviolet;
+        }
+        h2 {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .contain {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4% 0;
+            gap: 20px;
+        }
+        .img img {
+            width: 350px;
+            height: 300px;
+            border-radius: 8px;
+            border: 2px solid #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .text {
+            font-size: 16px;
+            padding: 2%;
+            background: rgba(0, 0, 0, 0.5); /* Add a background for better readability */
+            border-radius: 8px;
+            padding: 20px;
+        }
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            background-color: #f0f0f0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            bottom: 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">🏠</a></li>
+            <li><a href="./About.html">ⓘ</a></li>
+            <li><a href="./ContactUs.html">📞</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+            <li><a href="./Exp11-LoginPage.html">Login</a></li>
+            <li><a href="./Logi.html">🛒</a></li>
+        </ul>
+    </nav>
+
+    <h2>In case of any queries, contact us!</h2>
+
+    <div class="contain">
+        <div class="img">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.34033167835!2d80.04476467458953!3d15.51987575391137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b01ae1001ec8f%3A0x426588bd765da08c!2sRavi%20Priya%20Mall%20%26%20Multiplex!5e0!3m2!1sen!2sin!4v1722524295705!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="text">
+            <form action="#" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="mobile">Mobile No:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" title="Enter a ten digit number" required><br><br>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" cols="40" rows="4" required></textarea><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <h2>Contact Details:</h2>
+    <p>Mobile Number: +91 9867542310<br>Mail: abc@gmail.com</p>
+
+    <footer>
+        <p>&copy; 2024 Sparks Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mouse Event Listeners -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Apply hover effect to all images
+            const images = document.querySelectorAll('.img img');
+            images.forEach(image => {
+                image.addEventListener('mouseover', () => {
+                    image.style.transform = 'scale(1.05)';
+                    image.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)';
+                });
+                image.addEventListener('mouseout', () => {
+                    image.style.transform = 'scale(1)';
+                    image.style.boxShadow = '';
+                });
+            });
+
+            // Apply hover effect to all text blocks
+            const allElements = document.querySelectorAll('*');
+            allElements.forEach(element => {
+                element.addEventListener('mouseover', () => {
+                    element.style.outline =  '2px solid rgba(0,0,0,0.2)';
+                });
+                element.addEventListener('mouseout', () => {
+                    element.style.outline = 'none';
+                });
+            });
+
+            // Apply hover effect to all buttons
+            const buttons = document.querySelectorAll('input[type="submit"]');
+            buttons.forEach(button => {
+                button.addEventListener('mouseover', () => {
+                    button.style.backgroundColor = '#555';
+                    button.style.transform = 'scale(1.05)';
+                });
+                button.addEventListener('mouseout', () => {
+                    button.style.backgroundColor = '#333';
+                    button.style.transform = 'scale(1)';
+                });
+            });
+
+            // Apply hover effect to navigation links
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    link.style.textDecoration = 'underline';
+                });
+                link.addEventListener('mouseout', () => {
+                    link.style.textDecoration = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

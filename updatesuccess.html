@@ -1,0 +1,193 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Updated</title>
+    <link rel="stylesheet" href="Mystyle2.css">
+    <style>
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 7px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .content h1 {
+            color: #333;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">🏠︎</a></li>
+            <li><a href="./About.html">ⓘ</a></li>
+            <li><a href="./ContactUs.html">📞</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+            <li><a href="./Exp11-LoginPage.html">Login</a></li>
+            <li><a href="./Logi.html">🛒</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Your Profile is Updated Successfully...</h1>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <hr>
+    <footer>
+        <p>&copy; Sparks Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Updated</title>
+    <link rel="stylesheet" href="Mystyle2.css">
+    <style>
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 7px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: white;
+            color: blueviolet;
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .content h1 {
+            color: #333;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            bottom: 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">🏠</a></li>
+            <li><a href="./About.html">ⓘ</a></li>
+            <li><a href="./ContactUs.html">📞</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+            <li><a href="./Exp11-LoginPage.html">Login</a></li>
+            <li><a href="./Logi.html">🛒</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Your Profile is Updated Successfully...</h1>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <hr>
+    <footer>
+        <p>&copy; Sparks Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all navigation links
+            const navLinks = document.querySelectorAll('nav a');
+            // Select the content area
+            const content = document.querySelector('.content');
+            // Select the footer
+            const footer = document.querySelector('footer');
+
+            // Add mouse event listeners to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.textDecoration = 'underline'; // Ensure underline on hover
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.style.textDecoration = 'none'; // Remove underline when not hovering
+                });
+            });
+
+            // Add mouse event listeners to content area
+            content.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#f0f0f0'; // Light background color on hover
+                this.style.transition = 'background-color 0.3s'; // Smooth transition
+            });
+            content.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = ''; // Remove background color when not hovering
+            });
+
+            // Add mouse event listeners to footer
+            footer.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#444'; // Darker background on hover
+                this.style.transition = 'background-color 0.3s'; // Smooth transition
+            });
+            footer.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#333'; // Original background color
+            });
+            footer.addEventListener('click', function() {
+                this.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.3)'; // Add shadow on click
+            });
+        });
+    </script>
+</body>
+</html>
+
